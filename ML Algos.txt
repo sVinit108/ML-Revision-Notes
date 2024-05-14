@@ -1,0 +1,18 @@
+for final output (in 1&2) majority voting classifier is used. Standarization is not req. in 1&2.
+1. DT
+- Gini impurity & entropy is for spilting criteria. Entropy formula has log in its formula whereas gini has only simple maths. so when we have huge amt of features we should use gini else entropy.
+- there is always a risk of overfitting in DT. we can pruning but in pre-pruning we cant say if it will be right or not. In case of post-pruning its an extensive case, if we have larget dataset (eg:- 100 features & 1M rows)
+
+
+2. RF
+- Since DT leads to overfitting (i.e low bias & high variance), we use RF for having low bias & low variance.
+
+3. Clustering algos
+- when dataset is small use hierarchical, if large then k-means.
+- all centroids intialised should be very far to avoid extra clusters. for this we use kmeans++
+- in silhouette clustering the more val towards 1, the better the model is. if towards -1 then bad.
+
+4. Adaboost
+- RF is a forest of DTs having any max depth. Whereas Adaboost is a forest of tree having 1-depth (also called as stumps aka weak learners)
+- order of trees do not matter in RF. In Adaboost it does.
+- we determine how much a stump has in final classification based on how well it classified the sample

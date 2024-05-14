@@ -1,0 +1,36 @@
+**ML**
+1. Loss fuction:- A function which computes the distance/distance between the output/predicted value given by the model to the actual value.
+
+2. Gradient descent:- It is used to minimize the cost fuction by the finding the minima of the fuction.
+
+3. F-score - in general formula we have beta. if both FP&FN are imp we have beta=1. If FP is more imp than FN we reduce beta, eg beta=0.5. if    FN>>FP then increase beta, eg beta=2.
+
+4. Bagging_classifier (with 5 trees) vs RF (with 5 trees) - The difference is at the node level splitting for both. So Bagging algorithm using a decision tree would use all the features to decide the best split. On the other hand, the trees built in Random forest use a random subset of the features at every node, to decide the best split.
+
+
+**True positive rate (TPR):** The percentage of positive cases that are correctly predicted as positive. The TPR is a measure of how well the model is able to identify positive cases. A high TPR indicates that the model is able to correctly identify most of the positive cases.           	TPR = TP / (TP + FN)
+
+**False positive rate (FPR):** The percentage of negative cases that are incorrectly predicted as positive.The FPR is a measure of how often the model incorrectly predicts that a negative case is positive. A low FPR is desirable, especially when the cost of false positives is high.
+	FPR = FP / (TN + FP)
+
+**True negative rate (TNR):** The percentage of negative cases that are correctly predicted as negative. The TNR is a measure of how well the model is able to identify negative cases. A high TNR indicates that the model is able to correctly identify most of the negative cases.
+	TNR = TN / (TN + FP)
+
+**False negative rate (FNR):** The percentage of positive cases that are incorrectly predicted as negative. 
+The FNR is a measure of how often the model incorrectly predicts that a positive case is negative. A low FNR is desirable, especially when the cost of false negatives is high.
+	FNR = FN / (TP + FN)
+
+**Examples:**
+
+* **Fraud detection:** The TPR would be the percentage of fraudulent transactions that are correctly identified as fraudulent. The FPR would be the percentage of legitimate transactions that are incorrectly identified as fraudulent.
+* **Medical diagnosis:** The TPR would be the percentage of patients with a disease that are correctly identified as having the disease. The FPR would be the percentage of patients without the disease that are incorrectly identified as having the disease.
+* **Search engine optimization:** The TPR would be the percentage of relevant websites that are correctly identified as relevant. The FPR would be the percentage of irrelevant websites that are incorrectly identified as relevant.
+
+It is important to note that there is a trade-off between the TPR and FPR. For example, if a model is more aggressive in predicting positive cases, it will have a higher TPR but also a higher FPR. Similarly, if a model is more conservative in predicting positive cases, it will have a lower TPR but also a lower FPR.
+
+The best balance between TPR and FPR will depend on the specific problem and dataset. For example, in a fraud detection system, it may be more important to have a low FPR (to avoid flagging legitimate transactions as fraudulent) than a high TPR (to catch all fraudulent transactions). In a medical diagnosis system, it may be more important to have a high TPR (to catch all patients with a disease) than a low FPR (to avoid flagging patients without the disease as having it).
+
+**DL**
+- In fordward prop, when we at once pass the data pts, then we use loss funct. When we pass batches of data, we use loss funct.
+
+- Dropout is used to reduce overfitting. for val 0.3, 30% of neurons in a layer will be dead.

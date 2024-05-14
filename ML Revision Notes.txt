@@ -1,0 +1,58 @@
+1. 4 sources of data:-
+  (i). Web - Web scraping
+ (ii). A Database (Eg:- MySQL, MongoDB)
+(iii). Excel/CSV/TSV File
+ (iv). Json File
+
+
+2. In Data analysis we discover the situation i.e the issues & in FE we try to solve those issues
+
+
+3. Feature Engg
+
+1. Handling Null Values
+In case of categorical features we can do:-
+- Delte rows - can lessen the data
+- replace with most freg val - can make the feature imbalanced
+- apply classification ML algo to predict (consider fill value rows as train & empty val rows as test & then predict them)
+- apply unsuper ML (make n (n=no. of classes in the that feature) grps on the basis of other features (excluding the target feature) & see in which grp is a particular row fitting into)
+In case numerical features we can do:-
+- Mean/median/mode replacement  (MCAR)
+- Random sample imputation  (MCAR)
+- Capturing Nan values with a new feature(MNAR) - here nan vals are made a new feature & in the feature nan vals are replaced with mean/mode etc.
+so that thought the data is replaced with mean/mode etc since we are creating a new feature it will some info to the model.
+- End of Distribution imputation (MNAR) - here nan vals are made a new feature & in the feature nan vals are replaced with val at the tail of the distribution.
+so that thought the data is replaced with mean/mode etc since we are creating a new feature it will some info to the model.
+- Arbitary imputation
+- Frequent categories imputation
+
+In Random Sample Imputation, missing values are replaced with randomly selected values from the available non-missing values in the variable.
+This technique assumes that the missing values are missing completely at random (MCAR) and that the values in the variable are exchangeable.
+Random Sample Imputation helps to preserve the statistical properties of the variable by introducing variability through random selection.
+It is a simple and easy-to-implement method that can provide reasonable estimates, especially when the sample size is large and missingness is minimal.
+In Arbitrary Imputation, missing values are replaced with arbitrary, predetermined values.
+The replacement values are typically selected based on domain knowledge, business rules, or specific guidelines.
+Arbitrary Imputation does not utilize any statistical properties of the variable or the dataset and may introduce bias.
+This technique should be used with caution as the choice of arbitrary values can impact the analysis results and may not accurately represent the true values of the missing data.
+
+2. Handling Outliers
+
+3. Handling Categorical Values
+2 types:- Nominal & Ordinal
+- Nominal:- One-hot (as many unique vals that many cols created), One-hot with many categories (as many unique vals, from them top n col   selected & n col created), Mean encoding (first mean is cal., then here replaced by the mean only which is cal.)
+- Ordinal:- Label (replaced by rank 1,2,3...), target guided ordinal encoding (first mean is cal., then here replaced by rank 1,2,3..)
+- we can also do count/freq encoding - replacing each class in a feature by its count no.
+
+4. Data Transformation
+- why to do?:- every feature has magnitude & units which we should scale.
+- In case of Lin Reg the coeff. are cal. by gradient descent. The aim in that is to reach the global minima. If features are scaled the (1st) randomly assigned weight will be closer to the global minima thus it will take less time to converge if not scaled then it can more time.
+- In algos wherein euc dist is cal., scaling is required else dist b/w points can be huge.
+- wherever we have the GD or of dist we must perform scaling
+- When no to do:- in case of DT,RF,XGBoost i.e in case of ensemble learning. Since they make trees.
+
+
+5. Imbalanced Data
+- imbalanced data does not heavily impact ensemble algos
+- if data is small then do undersampling else dont do. Otherwise do oversampling.
+- Also look at accuracy,precision,f1 score, flase -ve, flase +ve. Based on domain knowledge reduce one of them.
+- If nothinf works then go with ensemble learning, where we can alter the class weight importance.

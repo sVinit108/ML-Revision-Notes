@@ -1,0 +1,46 @@
+1. Data collection & connection
+   - MySQL
+   - MongoDB
+2. EDA (& Data Vis)
+   - Basics steps to follow & theory
+   - Maths
+   - Auto libs
+   - Vis tools - Power BI, Tab
+3. Feature Engg
+   - Missing val
+   - Outliers
+   - Encoding
+   - Imbalanced Data
+   - Transformation
+4. Feature Selection
+   - Corr
+   - For/back elit
+   - Univar select
+   - RF imp
+   - DT Feat elect 
+5. Cross Validation
+6. Model Creat
+   - Maths
+   - Algos & math behind them (Reg,LoR,DT,RF,SVM,NB,KNN), (PCA,DBSCAN,K-means)
+   - Performance measures
+   - DL, ANN maths basics
+   - CNN
+   - RNN + LSTM
+   - Archit of one state of art model
+7. Hyperparameter tun
+   - Grid
+   - Random
+   - Keras-tuner
+   - Bayes
+   - Genetic algo
+   - Optuna
+7. Docker & kubernetes
+   - Theory
+   - Commands
+   - Practical (Pull & push....)
+8. Model Deployment
+   - Heroku
+   - AWS
+   - GCP
+   - Azure
+9. Model Monitoring & retraining
